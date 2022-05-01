@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/pokemonsStyle.css">
+    <link rel="icon" href="../img/icons/pokeball.ico">
+    <title>WEEDLE</title>
+</head>
+
+<body>
+ 
+    <div id="contenido">
+        
+        
+    </div>
+    <script type="text/javascript">
+        const cargarPokemon = async () => {
+              
+            try {
+                const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/13/`);
+                console.log(respuesta);
+                const datos = await respuesta.json();
+                console.log(datos);
+                let pokemones = '';
+                let imgP = datos.sprites.other.dream_world.front_default;
+                let abi_one = datos.abilities[0].ability.name.charAt(0).toUpperCase() + datos.abilities[0].ability.name.slice(1);
+                let abi_two = datos.abilities[1].ability.name.charAt(0).toUpperCase() + datos.abilities[1].ability.name.slice(1);
+                let names = datos.forms[0].name.toUpperCase();
+   
+                pokemones = pokemones + `
+                <div id="showPokemon">
+                        
+                        <div id="imgP" >
+                            
+                            
+
+                            <h1>${names}</h1>
+                            <hr class="line">
+                            <img src="${imgP}" alt="">
+                            
+                        </div>
+                        <div class="btns">
+                            <button  id="btn" class="btnAbi"onclick="showAbilities()">Mostar Habilidades</button>
+                            <button id="btn" class="btnSelec"onclick="showAllPokemons()">Selecciona otro pokemon</button>
+                        </div>
+                        
+                        <div class="text"id="texto"style="display:none;">
+                         <h2 class="text_title">Habilidades</h2>
+                         <hr class="line">
+                            <ul style="list-style-image:url(../img/liTwo.gif);">
+                                <li>${abi_one}</li>
+                                <li>${abi_two}</li>
+        
+                            </ul>
+                            
+                         <button id="btn" class="btnback"onclick="hiddenAbi()">Ocultar habilidades</button>
+                        </div>
+                    </div>`;
+
+             
+                
+                document.getElementById("contenido").innerHTML = pokemones;
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+        cargarPokemon();
+       
+        function showAbilities(){
+            document.getElementById('texto').style.display = 'block';
+        };
+        function hiddenAbi(){
+            document.getElementById('texto').style.display = 'none';
+        }
+        function showAllPokemons(){
+            window.location.href = "../pokemon.php";
+        };
+    </script> 
+ 
+
+</body>
+
+</html>
