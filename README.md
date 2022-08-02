@@ -1,8 +1,7 @@
 
-#Project_Api_Pokemons 
+## Project Api Pokemons 
 En este proyecto podemos ver 20 pokemones cada uno con su imagen y habilidades, el usuario podrá ver los 20 pokemones al crear una cuenta de usuario, una vez logeado basta con hacer click en algún pokemon para poder verlo, el proyecto también es responsive para comodidad del usuario. 
 
-#Project_Api_Pokemons 
 In this project we can see 20 pokemon each with its image and skills, the user can see the 20 pokemon by creating a user account, once logged in just click on any pokemon to see it, the project is also responsive for user convenience.
 ## API Reference
 
