@@ -49,7 +49,7 @@ session_start();
                       class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
                       <a class="navbar-brand page-scroll" href="#page-top"><i id="user_icon"class="fa fa-user" style="font-size: 20px; margin-right: 10px ;"></i><?=  strtoupper($data1), ' ',strtoupper($data2) ?></a>
-                  <!-- <a class="navbar-brand page-scroll" href="#page-top">App POKÉMON</a> -->
+                  
                   </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,12 +69,7 @@ session_start();
             <hr>
       </div>
       <div class="two_part" id="contenido">
-          
-      
-          
-        
-    
-    
+
       </div>
 
       <div class="five_part">
