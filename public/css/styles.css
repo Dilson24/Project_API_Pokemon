@@ -15,3 +15,28 @@ body {
     font-family: 'Bangers', cursive;
     letter-spacing: 0.1em;
 }
+
+/*HEADER */
+
+.content-header, .top-navegation{
+    border: 1px solid #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-logo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin:auto;
+    max-width: 20%;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin:auto;
+}
