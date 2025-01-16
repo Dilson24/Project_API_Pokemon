@@ -23,20 +23,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+}
+
+.top-navegation{
+    width: 100%;
 }
 
 .top-logo{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    margin:auto;
-    max-width: 20%;
+
 }
 .login{
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    margin:auto;
+    margin:10px;
+}
+
+.buttons-login li{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
