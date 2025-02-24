@@ -1,36 +1,58 @@
 :root {
-    --pokemon-red: #ff1c1c;   /* Rojo clásico de Pokémon */
-    --pokemon-yellow: #ffcc00; /* Amarillo Pikachu */
-    --pokemon-blue: #3b4cca;   /* Azul Pokémon */
-    --pokemon-white: #f8f8f8;  /* Blanco para fondos o detalles */
-    --pokemon-black: #333333;  /* Negro para contrastes */
-    --pokemon-gray: #a4a4a4;   /* Gris neutro para texto secundario */
-    --pokemon-border: #ffde00; /* Amarillo borde de PokeBall */
-    --pokemon-electric: #ffdd44; /* Amarillo eléctrico (tipo Electric) */
-    --pokemon-grass: #78c850;   /* Verde tipo Grass */
-    --pokemon-water: #6890f0;   /* Azul tipo Water */
-    --pokemon-fire: #f08030;    /* Naranja tipo Fire */
+    --pokemon-red: #ff1c1c;
+    /* Rojo clásico de Pokémon */
+    --pokemon-yellow: #ffcc00;
+    /* Amarillo Pikachu */
+    --pokemon-blue: #3b4cca;
+    /* Azul Pokémon */
+    --pokemon-white: #f8f8f8;
+    /* Blanco para fondos o detalles */
+    --pokemon-black: #333333;
+    /* Negro para contrastes */
+    --pokemon-gray: #a4a4a4;
+    /* Gris neutro para texto secundario */
+    --pokemon-border: #ffde00;
+    /* Amarillo borde de PokeBall */
+    --pokemon-electric: #ffdd44;
+    /* Amarillo eléctrico (tipo Electric) */
+    --pokemon-grass: #78c850;
+    /* Verde tipo Grass */
+    --pokemon-water: #6890f0;
+    /* Azul tipo Water */
+    --pokemon-fire: #f08030;
+    /* Naranja tipo Fire */
 }
 
-/*DEFAULT STYLE*/
+/* DEFAULT STYLE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*STYLES FOR ALL CONTAINERS*/
+/* STYLES FOR ALL CONTAINERS */
+html,
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     background: url("/public/images/pokemon.gif") no-repeat center center/cover;
     margin: 0;
     font-family: 'Bangers', cursive;
     letter-spacing: 0.1em;
 }
 
-/*HEADER */
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* HEADER */
+.content-header {
+    flex: 0 0 auto;
+}
 
 .content-header,
 .top-navegation {
@@ -46,7 +68,7 @@ body {
 }
 
 /* Estilo general del nav */
-.login{
+.login {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -67,20 +89,20 @@ body {
     display: inline-block;
     position: relative;
     text-decoration: none;
-    border: 4px solid var(--pokemon-blue); 
+    border: 4px solid var(--pokemon-blue);
     padding: 10px 20px;
     font-size: 17px;
     cursor: pointer;
     color: var(--pokemon-yellow);
     background-color: transparent;
-    transition: all 1s ease; 
+    transition: all 1s ease;
     overflow: hidden;
 }
 
 /* Hover: activa el efecto */
 .buttons-login li a:hover {
     color: var(--pokemon-blue);
-    border-color: var(--pokemon-yellow); 
+    border-color: var(--pokemon-yellow);
 }
 
 /* Pseudo-elemento ::before para el efecto de transformación */
@@ -94,14 +116,13 @@ body {
     transform: skewX(45deg);
     background-color: var(--pokemon-yellow);
     z-index: -1;
-    transition: all 1s ease; 
+    transition: all 1s ease;
 }
 
 /* Efecto en el pseudo-elemento ::before al hacer hover */
 .buttons-login li a:hover::before {
-    width: 160%; 
+    width: 160%;
 }
-
 
 /* TOP LOGO */
 .top-logo {
@@ -124,7 +145,6 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    padding: auto;
     border: 2px solid var(--pokemon-border);
     background-color: var(--pokemon-red);
     transition: transform 0.3s;
@@ -152,5 +172,36 @@ body {
     text-decoration: none;
 }
 
+/* CONTAINER TITLE */
+.content-title {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 16vh;
+    width: 100%;
+    border: 1px solid var(--pokemon-border);
+}
 
+/* Estilo de títulos */
+.title {
+    color: var(--pokemon-blue);
+    -webkit-text-stroke: 1px var(--pokemon-border);
+    letter-spacing: 3px;
+    font-size: 30px;
+}
 
+.title-logo img {
+    height: 300px;
+}
+
+/* FOOTER */
+.contaniner-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid var(--pokemon-grass);
+    padding: 20px;
+}
