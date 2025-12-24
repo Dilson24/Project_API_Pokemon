@@ -97,6 +97,7 @@ body {
     background-color: transparent;
     transition: all 1s ease;
     overflow: hidden;
+    z-index: 1;
 }
 
 /* Hover: activa el efecto */
@@ -116,7 +117,7 @@ body {
     transform: skewX(45deg);
     background-color: var(--pokemon-yellow);
     z-index: -1;
-    transition: all 1s ease;
+    transition: width 1s ease;
 }
 
 /* Efecto en el pseudo-elemento ::before al hacer hover */
