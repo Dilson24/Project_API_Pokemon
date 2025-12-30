@@ -31,7 +31,7 @@ body {
   flex-direction: column;
   font-family: "Bangers", cursive;
   letter-spacing: 0.1em;
-  background: 
+  background:
     rgba(0, 0, 0, 0.45)
     url("/public/images/pokemon.gif")
     center / cover
@@ -45,7 +45,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between;
+  max-height: 100vh;
 }
 
 /* =========================================================
@@ -76,7 +77,7 @@ body {
   border-radius: 50%;
   border: 2px solid var(--pokemon-border);
   background-color: var(--pokemon-red);
-  transition: transform 0.3s;;
+  transition: transform 0.3s;
 }
 
 .text-logo {
@@ -86,17 +87,17 @@ body {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
-
 .top-logo:hover .img-logo {
-    transform: rotate(360deg);
-    border-color: var(--pokemon-yellow);
-    transition: transform 0.5s, border-color 0.3s;
+  transform: rotate(360deg);
+  border-color: var(--pokemon-yellow);
+  transition: transform 0.5s, border-color 0.3s;
 }
 
 .top-logo:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
+
 /* ---------------- LOGIN BUTTONS ---------------- */
 .login {
   display: flex;
@@ -149,23 +150,31 @@ body {
    MAIN TITLE
 ========================================================= */
 .content-title {
-  flex: 1;
+  max-height: 100vh;
+  padding-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
 .title h1 {
-  font-size: 30px;
+  font-size: clamp(22px, 5vw, 30px);
   letter-spacing: 3px;
   color: var(--pokemon-yellow);
   -webkit-text-stroke: 0.7px var(--pokemon-blue);
 }
 
+.title-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .title-logo img {
-  height: 300px;
+  height: clamp(180px, 80vh, 300px);
+  max-width: 90%;
+  object-fit: contain;
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.45));
 }
 
@@ -206,10 +215,9 @@ body {
   transform: scale(1.15);
   border: 3px solid var(--pokemon-blue);
   box-shadow:
-  0 0 15px rgba(0, 120, 255, 0.6),
-  0 0 30px rgba(0, 120, 255, 0.4),
-  0 0 60px rgba(0, 120, 255, 0.2);
-
+    0 0 15px rgba(0, 120, 255, 0.6),
+    0 0 30px rgba(0, 120, 255, 0.4),
+    0 0 60px rgba(0, 120, 255, 0.2);
 }
 
 .social-media a {
@@ -226,7 +234,7 @@ body {
   transition: transform 0.5s, color 0.3s, opacity 0.3s;
 }
 
-/* Corrección visual puntual (válida y aceptable) */
+/* Correcciones visuales puntuales */
 .social-media .fa-instagram,
 .social-media .fa-github {
   transform: translate(1.1px, -1.1px);
@@ -244,6 +252,53 @@ body {
 
 /* ---------------- COPYRIGHT ---------------- */
 .brad {
+  text-align: center;
   color: var(--pokemon-white);
   letter-spacing: 2px;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .top-navegation {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-media {
+    gap: 40px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .login {
+    align-items: flex-end;
+  }
+
+  .buttons-login {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: clamp(10px, 4vw, 20px);
+  }
+
+  .buttons-login a {
+    padding:
+      clamp(8px, 2.5vw, 10px)
+      clamp(14px, 5vw, 20px);
+    font-size: clamp(14px, 4vw, 17px);
+    border-width: 3px;
+  }
 }
