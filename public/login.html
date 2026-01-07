@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Dilson Alexander Cruz Nivia" />
+    <meta name="description" content="Project api pokemon" />
+
+    <link rel="stylesheet" href="/public/css/user-login.css" />
+
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="containerLogin">
+      <form action="login.php" method="post" class="formBox">
+        <h1 class="formTitle">Ingresa a tu cuenta</h1>
+
+        <input
+          class="loginInput"
+          type="email"
+          name="email"
+          placeholder="📧 Ingresa tu email"
+          required
+        />
+
+        <input
+          class="loginInput"
+          type="password"
+          name="password"
+          placeholder="🔒 Ingresa tu clave de usuario"
+          required
+        />
+
+        <input
+          class="loginSubmit"
+          type="submit"
+          name="login"
+          value="Iniciar sesión"
+        />
+
+        <p class="textRegister">
+          ¿Aún no tienes cuenta?<br />
+          <a href="signup.php" class="btnStart">Registrarse</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
