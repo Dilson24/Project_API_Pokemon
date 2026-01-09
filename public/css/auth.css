@@ -68,6 +68,20 @@ body {
   overflow: visible;
 }
 
+.formBox--signUp {
+  background: linear-gradient(
+    to bottom,
+    var(--pokemon-red) 0%,
+    var(--pokemon-red) 45%, 
+    var(--pokemon-black) 43%,
+    var(--pokemon-black) 52%,
+    var(--pokemon-white) 52%,
+    var(--pokemon-white) 100%
+  );
+  /* max-width: 420px; */
+  /* gap: 5.5rem; */
+}
+
 /* =========================================================
       FORM HEADER
   ========================================================= */
@@ -77,8 +91,13 @@ body {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.9rem;
   width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.formHeader--signUp {
+  gap: 1rem;
 }
 
 .formTitle {
@@ -94,7 +113,7 @@ body {
 .formSubtitle {
   color: var(--pokemon-black);
   font-size: 1rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   font-weight: 600;
   text-align: center;
 }
@@ -122,6 +141,10 @@ body {
   z-index: 10;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0);
   transition: box-shadow 0.3s ease;
+}
+
+.pokeball-center--signUp{
+  top: 48%;
 }
 
 .formBox:hover .pokeball-center {
@@ -158,16 +181,23 @@ body {
   align-items: center;
   width: 100%;
   gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .inputGroup {
   width: 100%;
 }
 
+.inputGroup--signUp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .loginInput {
   width: 100%;
   padding: 1rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   border-radius: 12px;
   border: 3px solid var(--pokemon-blue);
   background: var(--screen-bg);
@@ -177,6 +207,10 @@ body {
   outline: none;
   transition: all 0.3s ease;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.loginInput--signUp {
+  padding: 0.6rem;
 }
 
 .loginInput::placeholder {
@@ -210,6 +244,10 @@ body {
   cursor: pointer;
   box-shadow: 0 6px 0 #1e3361; /* Efecto 3D botón presionado */
   transition: all 0.1s;
+}
+
+.loginSubmit--signUp {
+  padding: 0.6rem;
 }
 
 .loginSubmit:hover {
