@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dilson Alexander Cruz Nivia" />
+    <meta name="description" content="Project api pokemon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="/public/css/auth.css" />
+
+    <title>Register Maestro Pokémon</title>
+  </head>
+
+  <body>
+    <div class="containerLogin">
+      <form
+        action="resgister.php"
+        method="post"
+        class="formBox animate__animated animate__bounceInDown"
+      >
+        <div class="formHeader">
+          <h1 class="formTitle">Obtén tu licencia</h1>
+          <p class="formSubtitle">Crea tu cuenta de Entrenador</p>
+          <div
+            class="inputGroup animate__animated animate__fadeInUp animate__delay-1s"
+          >
+                      <input
+              class="loginInput"
+              type="text"
+              name="name"
+              placeholder="👤 Tu nombre de entrenador"
+              required
+            />
+            <input
+              class="loginInput"
+              type="text"
+              name="lastName"
+              placeholder="👤 Tu apellido de entrenador"
+              required
+            />
+        </div>
+        </div>
+
+        <div class="pokeball-center">
+          <div
+            class="pokeball-btn animate__animated animate__pulse animate__infinite"
+          ></div>
+        </div>
+
+        <div class="formBody">
+          <div
+            class="inputGroup animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <input
+              class="loginInput"
+              type="email"
+              name="email"
+              placeholder="📧 Tu correo de entrenador"
+              required
+            />
+            <input
+              class="loginInput"
+              type="password"
+              name="password"
+              placeholder="🔒 Tu clave secreta"
+              required
+            />
+          </div>
+          <input
+            class="loginSubmit animate__animated animate__pulse animate__delay-2s"
+            type="submit"
+            name="register"
+            value="Comenzar Aventura"
+          />
+          <p
+            class="textRegister animate__animated animate__fadeIn animate__delay-2s"
+          >
+            ¿Ya eres entrenador?<br />
+            <a href="signIn.html" class="btnStart"
+              >Ingresa en el laboratorio</a
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
